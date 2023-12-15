@@ -8,7 +8,6 @@
     <title>Bem-Vindo | Gesso Fernandes</title>
 </head>
 <body>
-
 <header>
     <div class="title">
         <img class="logo" src="{% static 'global/images/logo.svg' %}" alt="">
@@ -23,8 +22,21 @@
             <li><a href="#">Blog</a></li>
         </ul>
     </div>
+</header>
+{% block content %}{% endblock content %}
+<div class="container-contact">
+    <div class="session-title-container">
+        <h3 class="session-title">Entre em Contato Conosco</h3>
+    </div>
+    <div class="contacts-methods">
+        <div class="contact-info"></div>
+        <div class="contact-form"></div>
+    </div>
+</div>
+</body>
+</html>
 
-    <script>
+<script>
     // Adiciona um evento de clique ao contêiner da lista
     document.getElementById('menu').addEventListener('click', function (event) {
         // Verifica se o clique foi em um item da lista com a tagName 'A'
@@ -39,8 +51,4 @@
             event.target.classList.add('active');
         }
     });
-
-    </script>
-</header>
-</body>
-</html>
+</script>
