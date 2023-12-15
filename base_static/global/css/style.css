@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #1D2437;
+    color: aliceblue;
+    height: 5.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #1D2437;
+}
+
+header .title {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding-left: 25px;
+}
+
+.title .logo {
+    padding-right: 5px;
+    margin-left: 15px;
+    height: 5vh;
+    width: 5vw;
+}
+
+.title h1 {
+    font-size: 1.56vw;
+    white-space: nowrap;
+}
+
+.header-nav {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-options {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    list-style: none;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.nav-options li {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease;
+    padding: 0 15px; /* Adicione um preenchimento aqui */
+}
+
+.nav-options li a {
+    display: block; /* Faz o link ocupar toda a largura do pai */
+    height: 100%;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-options li a.active {
+    border-bottom: 5px solid goldenrod; /* Cor desejada */
+}
+
+.nav-options li a:hover {
+    border-bottom: 5px solid goldenrod; /* Efeito de hover */
+}

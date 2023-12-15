@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "global/css/style.css" %}">
+    <title>Bem-Vindo | Gesso Fernandes</title>
+</head>
+<body>
+
+<header>
+    <div class="title">
+        <img class="logo" src="{% static 'global/images/logo.svg' %}" alt="">
+        <h1>Gesso Fernandes</h1></div>
+    <div class="header-nav">
+        <ul class="nav-options" id="menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contatos</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+
+    <script>
+    // Adiciona um evento de clique ao contêiner da lista
+    document.getElementById('menu').addEventListener('click', function (event) {
+        // Verifica se o clique foi em um item da lista com a tagName 'A'
+        if (event.target.tagName === 'A') {
+            // Remove a classe 'active' de todos os itens da lista
+            var menuItems = this.querySelectorAll('li a');
+            menuItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            // Adiciona a classe 'active' ao item <a> clicado
+            event.target.classList.add('active');
+        }
+    });
+
+    </script>
+</header>
+</body>
+</html>
