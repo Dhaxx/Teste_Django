@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "global/css/style.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,300&display=swap" rel="stylesheet">
     <title>Bem-Vindo | Gesso Fernandes</title>
 </head>
 <body>
 <header>
     <div class="title">
-        <img class="logo" src="{% static 'global/images/logo.svg' %}" alt="">
+        <img class="logo" src="{% static 'global/icons/logo.svg' %}" alt="">
         <h1>Gesso Fernandes</h1></div>
     <div class="header-nav">
         <ul class="nav-options" id="menu">
@@ -24,12 +27,43 @@
     </div>
 </header>
 {% block content %}{% endblock content %}
-<div class="container-contact">
+<div class="session-container">
     <div class="session-title-container">
-        <h3 class="session-title">Entre em Contato Conosco</h3>
+        <h2 class="session-title">Entre em Contato Conosco</h2>
     </div>
     <div class="contacts-methods">
-        <div class="contact-info"></div>
+        <div class="contact-info">
+            <div class="info-group">
+                <img src="{% static 'global/icons/phone.svg' %}" alt="icone-telefone-amarelo">
+                <div class="info">
+                    <h3>Telefone</h3>
+                    <span>(17) 99115-5206</span>
+                </div>
+            </div>
+            <div class="info-group">
+                <img src="{% static 'global/icons/clock.svg' %}" alt="icone-telefone-amarelo">
+                <div class="info">
+                    <h3>Horário de Funcionamento</h3>
+                    <span>Segunda à Sexta, das 7h às 17h<br>
+                        Sábados das 7h às 12h</span>
+                </div>
+            </div>
+            <div class="info-group">
+                <img src="{% static 'global/icons/Instagram.svg' %}" alt="icone-telefone-amarelo">
+                <div class="info">
+                    <h3>Instagram</h3>
+                    <span>@GessoFernandes</span>
+                </div>
+            </div>
+            <div class="info-group">
+                <a href="https://api.whatsapp.com/send/?phone=5517991155206&text&type=phone_number&app_absent=0" target="_blank">
+                    <img src="{% static 'global/icons/whatsapp.svg' %}" alt="icone-telefone-amarelo">
+                    <div class="info">
+                        <h3>Inicie uma conversa no WhatsApp</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="contact-form"></div>
     </div>
 </div>
