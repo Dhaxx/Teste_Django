@@ -42,7 +42,7 @@
     width: 40%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
 }
 
@@ -216,11 +216,15 @@
     margin-top: 10px;
 }
 
-.submit-container button {
+.botao {
     background-color: #DAA520;
     border: none;
     color: aliceblue;
-    width: 80px;
-    height: 25px;
+    width: 160px;
+    height: 40px;
     cursor: pointer;
+}
+
+.gray {
+    background-color: #626161;
 }

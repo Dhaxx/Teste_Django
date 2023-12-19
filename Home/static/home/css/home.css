@@ -1,0 +1,30 @@
+.about-us-minified {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.about-us-minified img {
+    height: 80%;
+    width: 40%;
+    object-fit: cover;
+}
+
+.about-us-minified-text {
+    height: 80%;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.about-us-minified-text h3 {
+    color: goldenrod;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.about-us-minified-text .button-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50%;
+}
