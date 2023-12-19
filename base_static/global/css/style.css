@@ -6,7 +6,7 @@
     font-family: 'poppins', sans-serif;
 }
 
-header {
+.header-container {
     width: 100%;
     background-color: #1D2437;
     color: aliceblue;
@@ -18,7 +18,7 @@ header {
     border-bottom: 2px solid #1D2437;
 }
 
-header .title {
+.header-container .titulo {
     height: 100%;
     width: auto;
     display: flex;
@@ -28,12 +28,12 @@ header .title {
     padding-left: 2.60vw;
 }
 
-.title .logo {
+.titulo .logo {
     padding-right: 5px;
     height: 4vh;
 }
 
-.title h1 {
+.titulo h1 {
     font-size: 2vw;
     white-space: nowrap;
 }

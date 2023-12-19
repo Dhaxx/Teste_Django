@@ -1,0 +1,53 @@
+/* global/css/carrossel.css */
+
+.estilizado {
+    display: flex!important;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 15px; /* Adicione algum preenchimento para afastar do canto inferior */
+    width: 100%;
+    left: 0;
+    background-color: #1d2437cd;
+    height: 140px;
+    margin-bottom: 0!important;
+}
+
+.estilizado h2 {
+    color: goldenrod;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3.5vw;
+    margin-bottom: 5px; /* Adicione uma margem inferior para separar do texto abaixo */
+}
+
+/* global/css/carrossel.css */
+
+#carouselExample {
+    max-height: 800px; /* Ajuste este valor conforme necessário */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    max-height: 100%;
+}
+
+.carousel-item img {
+    max-height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.carousel-caption {
+    bottom: 0;
+    margin-bottom: 15px; /* Adicione uma margem inferior para afastar do canto inferior */
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+}
+
+.carousel-indicators .active {
+    background-color: goldenrod;
+}
