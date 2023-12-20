@@ -14,7 +14,9 @@
                 <img src="{{ slide.imagem.url }}" class="d-block w-100" alt="{{ slide.titulo }}">
                 <div class="carousel-caption d-none d-md-block estilizado">
                     <h2 class='carrossel-slide-titulo'>{{ slide.titulo }}</h5>
-                    <p>{{ slide.descricao }}</p>
+                    {% if slide.descricao  %}
+                        <p>{{ slide.descricao }}</p>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

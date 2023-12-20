@@ -6,7 +6,10 @@ class Carrossel(models.Model):
     descricao = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
-        return self.titulo + ' - ' + self.descricao
+        if self.descricao:
+            return self.titulo + ' - ' + self.descricao
+        else:
+            return self.titulo
     
     class Meta:
         verbose_name_plural = 'carrosseis'
