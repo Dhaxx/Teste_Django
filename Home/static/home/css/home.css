@@ -28,3 +28,7 @@
     flex-direction: row-reverse;
     height: 50%;
 }
+
+#lista-servicos {
+    display: flex;
+}

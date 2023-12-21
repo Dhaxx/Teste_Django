@@ -33,13 +33,15 @@
         <div class="session-title-container">
             <h2 class="session-title">Serviços</h2>
         </div>
-        <ul>
+        <ul id='lista-servicos'>
             {% for servico in home_servicos %}
-            {% if servico.imagem %}
-                <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
-            {% endif %}
-                <li>{{ servico.titulo }}</li>
+            {% if servico.visivel  %}
+                {% if servico.imagem %}
+                    <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+                {% endif %}
+                <h5>{{ servico.titulo }}</h5>
                 <!-- Adicione outros campos do modelo Servico conforme necessário -->
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
