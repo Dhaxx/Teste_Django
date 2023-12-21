@@ -29,4 +29,18 @@
             </div>
         </div>
     </div>
+    <div class="session-container-white inline">
+        <div class="session-title-container">
+            <h2 class="session-title">Serviços</h2>
+        </div>
+        <ul>
+            {% for servico in home_servicos %}
+            {% if servico.imagem %}
+                <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+            {% endif %}
+                <li>{{ servico.titulo }}</li>
+                <!-- Adicione outros campos do modelo Servico conforme necessário -->
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock content %}
