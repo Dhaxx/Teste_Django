@@ -35,13 +35,16 @@
         </div>
         <ul id='lista-servicos'>
             {% for servico in home_servicos %}
-            {% if servico.visivel  %}
-                {% if servico.imagem %}
-                    <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+                {% if servico.visivel %}
+                    {% if servico.imagem %}
+                        <li class="servico-item">
+                            <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>{{ servico.titulo }}</h5>
+                            </div>
+                        </li>
+                    {% endif %}
                 {% endif %}
-                <h5>{{ servico.titulo }}</h5>
-                <!-- Adicione outros campos do modelo Servico conforme necessário -->
-            {% endif %}
             {% endfor %}
         </ul>
     </div>
