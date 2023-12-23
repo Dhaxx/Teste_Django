@@ -29,23 +29,26 @@
             </div>
         </div>
     </div>
-    <div class="session-container-white inline">
+    <div class="session-container-blue inline">
         <div class="session-title-container">
             <h2 class="session-title">Serviços</h2>
         </div>
-        <ul id='lista-servicos'>
+        <div class='lista-servicos'>
             {% for servico in home_servicos %}
                 {% if servico.visivel %}
                     {% if servico.imagem %}
-                        <li class="servico-item">
-                            <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>{{ servico.titulo }}</h5>
-                            </div>
-                        </li>
+                    <div class="servico-item">
+                        <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+                        <div class="thumbnail-titulo">
+                            <h5>{{ servico.titulo }}</h5>
+                        </div>
+                    </div>
                     {% endif %}
                 {% endif %}
             {% endfor %}
-        </ul>
+        </div>
+        <div class="button-container">
+            <a href=""><button class="botao">Ver Mais</button></a> 
+        </div>
     </div>
 {% endblock content %}
