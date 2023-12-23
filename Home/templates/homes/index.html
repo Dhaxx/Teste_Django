@@ -33,22 +33,24 @@
         <div class="session-title-container">
             <h2 class="session-title">Serviços</h2>
         </div>
-        <div class='lista-servicos'>
-            {% for servico in home_servicos %}
-                {% if servico.visivel %}
-                    {% if servico.imagem %}
-                    <div class="servico-item">
-                        <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
-                        <div class="thumbnail-titulo">
-                            <h5>{{ servico.titulo }}</h5>
+        <div class="session-container-blue">
+            <div class='lista-servicos'>
+                {% for servico in home_servicos %}
+                    {% if servico.visivel %}
+                        {% if servico.imagem %}
+                        <div class="servico-item">
+                            <img src="{{ servico.imagem.url }}" alt="{{ servico.titulo }}">
+                            <div class="thumbnail-titulo">
+                                <h5>{{ servico.titulo }}</h5>
+                            </div>
                         </div>
-                    </div>
+                        {% endif %}
                     {% endif %}
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="button-container">
-            <a href=""><button class="botao">Ver Mais</button></a> 
+                {% endfor %}
+            </div>
+            <div class="button-container">
+                <a href=""><button class="botao">Ver Mais</button></a> 
+            </div>
         </div>
     </div>
 {% endblock content %}
