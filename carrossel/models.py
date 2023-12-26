@@ -1,15 +1,26 @@
 from django.db import models
+from projetos.models import Projetos
+from servicos.models import Servicos
 
 class Carrossel(models.Model):
-    imagem = models.ImageField(upload_to='carrossel-imgs/%y/%m/', null=True, blank=True)
-    titulo = models.CharField(max_length=100, null=False, blank=False)
-    descricao = models.CharField(max_length=50, null=True, blank=True)
+    titulo_carrossel = models.CharField(max_length=100, null=False, blank=False)
+    projeto = models.ForeignKey(Projetos, on_delete=models.SET_NULL, null=True, blank=True)
+    home = models.BooleanField(default=False, unique=True)
 
     def __str__(self):
-        if self.descricao:
-            return self.titulo + ' - ' + self.descricao
-        else:
-            return self.titulo
-    
+        return self.titulo_carrossel
+
     class Meta:
         verbose_name_plural = 'carrosseis'
+
+class ImagemCarrossel(models.Model):
+    carrossel = models.ForeignKey(Carrossel, on_delete=models.CASCADE)
+    imagem = models.ImageField(upload_to='carrossel-imgs/%y/%m/', null=True, blank=True)
+    titulo_imagem = models.CharField(max_length=100, null=False, blank=False)
+    descricao_imagem = models.CharField(max_length=50, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.carrossel.titulo_carrossel} - {self.titulo_imagem}'
+
+    class Meta:
+        verbose_name_plural = 'imagens dos carrosseis'
