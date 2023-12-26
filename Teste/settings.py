@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gn#fv!j3f&9bae853)3grlhzf8hru7qz75a7w106ycgplou$5-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'carrossel',
     'sobre',
     'servicos',
+    'projetos',
 ]
 
 MIDDLEWARE = [
