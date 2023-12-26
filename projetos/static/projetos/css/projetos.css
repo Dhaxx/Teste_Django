@@ -1,0 +1,85 @@
+#realized-projects {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+#realized-projects .session-title-container {
+    padding-left: 2.60vw;
+}
+
+#realized-projects .session-container-white {
+    padding: 0;
+}
+
+.realized-projects-minified {
+    height: 100%;
+}
+
+.realized-projects-minified .button-container {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#items {
+    display: flex;
+    height: 80%;
+}
+
+.item {
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.item h5 {
+    color: goldenrod;
+    position: relative;
+    top: -50px;
+    padding-left: 10px;
+    width: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 20;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.item h6 {
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: -60px;
+    padding-left: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index:20;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.item:hover h5 {
+    opacity: 1;
+}
+
+.item:hover h6 {
+    opacity: 1;
+}
+
+.item:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.431), rgba(0, 0, 0, 0));
+    z-index: 10;
+}

@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "global/css/style.css" %}">
+<link rel="stylesheet" href="{% static 'projetos/css/projetos.css' %}".css">
+{% if projetos %}
+<div class="session-container-white inline" id="realized-projects">
+    <div class="session-title-container">
+        <h2 class="session-title">Projetos Realizados</h2>
+    </div>
+    <div class="session-container-white">
+        <div class="realized-projects-minified">
+            <div id="items">
+                {% for projeto in projetos_realizados %}
+                    <div class="item">
+                        <img src="{{ projeto.imagem_1.url }}" alt="{{ projeto.titulo }}"/>
+                        <h5>{{ projeto.titulo }}</h5>
+                        <h6>{{ projeto.cidade }}</h6>
+                    </div>
+                {% endfor %}
+              </div>
+              <div class="button-container">
+                  <a href=""><button class="botao gray">Ver mais</button></a> 
+              </div>
+        </div>
+    </div>
+</div>
+{% endif %}

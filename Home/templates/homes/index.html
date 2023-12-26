@@ -1,8 +1,7 @@
 {% extends "global/base.html" %}
-
 {% block content %}
     {% load static %}
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}".css">
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
     {% include "carrossel/carrossel_template.html" with slides=home_carrossel %}
     <div class="session-container-white inline">
         <div class="session-title-container">
@@ -23,7 +22,7 @@
                         jornada criativa com você. Descubra como podemos transformar sua visão em uma
                         realidade de gesso incomparável.</p>
                         <div class="button-container">
-                            <a href=""><button class="botao gray">Saiba mais</button></a> 
+                            <a href=""><button class="botao gray">Ler Mais</button></a> 
                         </div>
                 </div>
             </div>
@@ -53,23 +52,5 @@
             </div>
         </div>
     </div>
-    <div class="session-container-white inline" id="realized-projects">
-        <div class="session-title-container">
-            <h2 class="session-title">Projetos Realizados</h2>
-        </div>
-        <div class="session-container-white">
-            <div class="realized-projects-minified">
-                <div id="items">
-                    <div class="item"><img src="https://unsplash.it/1600/400?image=950"/></div>
-                    <div class="item"><img src="https://unsplash.it/1600/400?image=930"/></div>
-                    <div class="item"><img src="https://unsplash.it/1600/400?image=990"/></div>
-                    <div class="item"><img src="https://unsplash.it/1600/400?image=980"/></div>
-                    <div class="item"><img src="https://unsplash.it/1600/400?image=990"/></div>
-                  </div>
-                  <div class="button-container">
-                      <a href=""><button class="botao gray">Saiba mais</button></a> 
-                  </div>
-            </div>
-        </div>
-    </div>
+    {% include 'projetos/expositor_projetos.html' with projetos_realizados=projetos %}
 {% endblock content %}

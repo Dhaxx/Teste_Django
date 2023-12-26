@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Projetos
 
-def projetos_view(request):
+def expositor_projetos(request):
     projetos = Projetos.objects.all()
-    return render(request, 'projetos/projetos_template.html', {'projetos': projetos})
+    return render(request, 'projetos/expositor_projetos.html', {'projetos': projetos})
