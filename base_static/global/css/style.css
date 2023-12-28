@@ -122,6 +122,7 @@
 
 .session-container-blue h2 {
     color: #ffffff;
+    font-weight: 500;
 }
 
 .session-title-container {
@@ -135,6 +136,7 @@
     color: #626161;
     padding-left: 1vw;
     border-left: 5px solid goldenrod;
+    font-weight: 500;
 }
 
 /* Contato */

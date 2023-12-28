@@ -1,4 +1,3 @@
-/* sobre/css/sobre.css */
 .img-container {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -56,7 +55,84 @@
   letter-spacing: 0.32px;
 }
 
+.session-title {
+  width: 50%;
+}
+
 .session-container-white {
   padding-top: 60px;
   background-color: aliceblue;
+}
+
+.row {
+  flex-direction: row;
+  align-items: flex-start;
+  height: auto;
+}
+
+.text {
+  padding-top: 0px;
+  padding-left: 1.8vw;
+  align-items: flex-start;
+  height: auto;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.text p {
+  width: 100%;
+}
+
+.img-wrapper {
+  /* height: 120px; */
+  width: 150vw;
+  filter: drop-shadow(13px 20px 0px goldenrod);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.values-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.values-list li {
+  width: 380px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 15px 30px 30px 30px;
+  margin-right: 20px;
+}
+
+.values-list img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.values-list h4 {
+  font-size: 22px;
+  text-wrap: nowrap;
+  color: #1D2437;
+}
+
+.values-list span {
+  color: #626161;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: revert;
+  letter-spacing: 0.2px;
 }
