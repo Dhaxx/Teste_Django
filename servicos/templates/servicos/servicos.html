@@ -1,0 +1,39 @@
+{% extends "global/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'servicos/css/servicos.css' %}">
+<div class="img-container">
+    <img src="{% static 'global/images/gesso-3d-background.jpg' %}" alt="">
+    <div class="sobre-container">
+        <div class="sobre-title">
+            <h1>Nossos Serviços</h1>
+            <h4>Transformando Ideias em Realidade!</h4>
+        </div>
+    </div>
+</div>
+<div class="session-container-white row">
+    <div class="wrapper">
+        <div class="session-title-container">
+            <h2 class="session-title">Descubra nossos Serviços</h2>
+        </div>
+        <div class="session-container-white text">
+            <p>Bem-vindo à nossa página de serviços, onde a excelência e 
+            a dedicação se unem para criar experiências únicas. Na vanguarda da inovação, oferecemos uma variedade de soluções projetadas para atender às suas necessidades 
+            com precisão e estilo.</p>
+        </div>
+    </div>
+    <div class="servicos">
+        {% for servico in servicos %}
+        <div class="servico">
+            <img src="{{ servico.imagem.url }}" alt="">
+            <div class="identificador-servico">
+                <h3>{{ servico.titulo }}</h3>
+                {% if servico.descricao %}
+                <p>{{ servico.descricao }}</p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
