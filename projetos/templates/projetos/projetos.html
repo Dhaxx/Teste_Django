@@ -1,0 +1,53 @@
+{% extends "global/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'servicos/css/servicos.css' %}">
+<link rel="stylesheet" href="{% static 'projetos/css/projetos.css' %}">
+<div class="img-container">
+    <img src="{% static 'global/images/projetos.png' %}" alt="">
+    <div class="sobre-container">
+        <div class="sobre-title">
+            <h1>Nossos Serviços</h1>
+            <h4>Transformando Ideias em Realidade!</h4>
+        </div>
+    </div>
+</div>
+<div class="session-container-white row">
+    <div class="session-title-container">
+        <h2 class="session-title">Categoria</h2>
+    </div>
+    <div class="filter-options">
+        <a href="{% url 'projetos' %}">Todos</a>
+        <a href="{% url 'projetos_filtrados' tipo_projeto='residencial' %}">Residenciais</a>
+        <a href="{% url 'projetos_filtrados' tipo_projeto='comercial' %}">Comerciais</a>
+    </div>
+</div>
+<div class="projetos">
+    {% for projeto in page.object_list %}
+    <div class="projeto">
+        <img src="{{ projeto.imagem_1.url }}" alt="">
+        <div class="identificador-projeto">
+            <h3>{{ projeto.titulo }}</h3>
+            <p>{{ projeto.cidade }}</p>
+            <div class="ver-mais">
+                <a href="{% url 'detalhes_projeto' projeto_id=projeto.id %}">Ver Sobre</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="paginacao">
+    {% if page.has_previous %}
+        <a id='back' href="{% url 'projetos' %}?page={{ page.previous_page_number }}">
+            <img src="{% static 'global/icons/next.svg' %}" alt="">
+            Anterior
+        </a>
+    {% endif %}
+    {% if page.has_next %}
+        <a id='next' href="{% url 'projetos' %}?page={{ page.next_page_number }}">
+            Proximo
+            <img src="{% static 'global/icons/next.svg' %}" alt="">
+        </a>
+    {% endif %}
+</div>
+{% endblock %}

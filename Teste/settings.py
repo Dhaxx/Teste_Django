@@ -129,6 +129,7 @@ STATICFILES_DIRS = (
     BASE_DIR / 'home/static',
     BASE_DIR / 'sobre/static',
     BASE_DIR / 'servicos/static',
+    BASE_DIR / 'projetos/static',
 )
 
 # Default primary key field type
