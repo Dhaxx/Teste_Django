@@ -30,7 +30,7 @@
             <h3>{{ projeto.titulo }}</h3>
             <p>{{ projeto.cidade }}</p>
             <div class="ver-mais">
-                <a href="{% url 'detalhes_projeto' projeto_id=projeto.id %}">Ver Sobre</a>
+                <a href="{% url 'detalhes_projeto' titulo=projeto.titulo %}">Ver Sobre</a>
             </div>
         </div>
     </div>

@@ -18,6 +18,6 @@ def projetos(request, tipo_projeto=None):
         
     return render(request, 'projetos/projetos.html', {'page': page})
 
-def projeto_detalhado(request, id):
-    projeto = Projetos.objects.get(id=id)
+def projeto_detalhado(request, titulo):
+    projeto = Projetos.objects.get(titulo=titulo)
     return render(request, 'projetos/projeto_detalhado.html', {'projeto': projeto})
