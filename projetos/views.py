@@ -20,4 +20,13 @@ def projetos(request, tipo_projeto=None):
 
 def projeto_detalhado(request, titulo):
     projeto = Projetos.objects.get(titulo=titulo)
-    return render(request, 'projetos/projeto_detalhado.html', {'projeto': projeto})
+    carrosseis_do_projeto = projeto.carrossel_set.all()
+
+    imagens_do_projeto = []
+
+    for carrossel in carrosseis_do_projeto:
+        imagens_do_carrossel = carrossel.imagemcarrossel_set.all()
+        
+        imagens_do_projeto.extend(imagens_do_carrossel)
+
+    return render(request, 'projetos/projeto_detalhado.html', {'projeto': projeto, 'carrossel': carrosseis_do_projeto, 'imagens_do_projeto':imagens_do_projeto})

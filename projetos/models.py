@@ -10,20 +10,16 @@ class Cidade(models.Model):
         return self.nome
 
 class Projetos(models.Model):
-    imagem_1 = models.ImageField(upload_to=upload_path, null=True, blank=True)
-    imagem_2 = models.ImageField(upload_to=upload_path, null=True, blank=True)
-    imagem_3 = models.ImageField(upload_to=upload_path, null=True, blank=True)
-    imagem_4 = models.ImageField(upload_to=upload_path, null=True, blank=True)
+    miniatura = models.ImageField(upload_to=upload_path, null=True, blank=True)
+    tipo = models.CharField(choices=[('residencial', 'Residencial'), ('comercial', 'Comercial')], max_length=20, null=False, blank=False, default='residencial')
 
     titulo = models.CharField(max_length=100, null=False, blank=False)
     cidade = models.ForeignKey(Cidade, on_delete=models.SET_NULL, null=True, blank=True)
-    descricao = models.CharField(max_length=50, null=False, blank=False)
-    tipo = models.CharField(choices=[('residencial', 'Residencial'), ('comercial', 'Comercial')], max_length=20, null=False, blank=False, default='residencial')
-
-    sobre = models.CharField(max_length=350, null=False, blank=False)    
+    descricao = models.TextField(null=False, blank=False)
+    servicos_realizados = models.TextField(null=True, blank=True)
 
     imagem_cliente = models.ImageField(upload_to=upload_path, null=True, blank=True)
-    feedback = models.CharField(max_length=150, null=False, blank=False)
+    feedback = models.TextField(null=True, blank=True)
     nome_cliente = models.CharField(max_length=100, null=False, blank=False)
 
     visivel = models.BooleanField(default=True)

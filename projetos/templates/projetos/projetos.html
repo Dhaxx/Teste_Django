@@ -25,7 +25,7 @@
 <div class="projetos">
     {% for projeto in page.object_list %}
     <div class="projeto">
-        <img src="{{ projeto.imagem_1.url }}" alt="">
+        <img src="{{ projeto.miniatura.url }}" alt="">
         <div class="identificador-projeto">
             <h3>{{ projeto.titulo }}</h3>
             <p>{{ projeto.cidade }}</p>

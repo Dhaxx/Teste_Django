@@ -1,0 +1,77 @@
+.estilizado {
+    top: 585px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 20;
+}
+
+.estilizado h2 {
+    text-wrap: nowrap;
+    background-color: aliceblue;
+    border-radius: 20px 20px 0 0;
+    font-style: normal;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.sobre-container {
+    height: 1px!important;
+    z-index: 20!important;
+    position: relative;
+    align-items: flex-start!important;
+}
+
+.sobre-title {
+    margin-left: 50px;
+    width: auto!important;
+    height: 110px!important;
+    padding: 15px;
+    padding-bottom: 30px;
+}
+
+.sobre-title h1 {
+    font-weight: 500;
+    color: goldenrod;
+    margin-bottom: 0;
+}
+
+.sobre-title h4 {
+    font-style: italic;
+    color: #626161;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.text p {
+    color: #626161;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.24px;
+}
+
+.session-container-white {
+    height: auto;
+}
+
+#feedback {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.feedback-session {
+    flex-direction: row;
+}
+
+.feedback-session h6 {
+    color: #1D2437;
+}
+
+#imagem-cliente {
+    box-shadow: -15px 20px 0px 0px #daa520;
+    height: 35vh;
+    object-fit: cover;
+}

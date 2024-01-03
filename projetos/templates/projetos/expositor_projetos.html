@@ -11,7 +11,7 @@
             <div id="items">
                 {% for projeto in projetos_realizados %}
                     <div class="item">
-                        <img src="{{ projeto.imagem_1.url }}" alt="{{ projeto.titulo }}"/>
+                        <img src="{{ projeto.miniatura.url }}" alt="{{ projeto.titulo }}"/>
                         <h5>{{ projeto.titulo }}</h5>
                         <h6>{{ projeto.cidade }}</h6>
                     </div>

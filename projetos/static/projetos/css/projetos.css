@@ -151,12 +151,13 @@
 .identificador-projeto h3 {
     color: goldenrod;
     font-weight: 500;
+    height: 15px;
     margin-bottom: 5px;
 }
   
 .identificador-projeto p {
     position: relative;
-    bottom: 8px;
+    /* bottom: 8px; */
     color: #fff;
     font-style: italic;
     font-weight: 200;
