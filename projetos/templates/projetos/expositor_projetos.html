@@ -10,16 +10,18 @@
         <div class="realized-projects-minified">
             <div id="items">
                 {% for projeto in projetos_realizados %}
+                <a href="{% url 'detalhes_projeto' titulo=projeto.titulo %}">
                     <div class="item">
                         <img src="{{ projeto.miniatura.url }}" alt="{{ projeto.titulo }}"/>
                         <h5>{{ projeto.titulo }}</h5>
                         <h6>{{ projeto.cidade }}</h6>
                     </div>
+                </a>
                 {% endfor %}
-              </div>
-              <div class="button-container">
-                  <a href=""><button class="botao gray">Ver mais</button></a> 
-              </div>
+            </div>
+            <div class="button-container">
+              <a href="{% url "projetos" %}"><button class="botao gray">Ver mais</button></a> 
+          </div>
         </div>
     </div>
 </div>
