@@ -95,7 +95,7 @@ a {
 }
 
 .filter-options a {
-    width: 10vw;
+    /* width: 10vw; */
     text-decoration: none;
     text-align: center;
     background-color: #1D2437;
@@ -128,7 +128,7 @@ a {
 .projeto {
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
     width: 40vh;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -138,7 +138,7 @@ a {
 }
   
 .projeto img {
-    height: 80%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
