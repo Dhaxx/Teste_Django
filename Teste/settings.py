@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'sobre',
     'servicos',
     'projetos',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,7 @@ STATICFILES_DIRS = (
     BASE_DIR / 'sobre/static',
     BASE_DIR / 'servicos/static',
     BASE_DIR / 'projetos/static',
+    BASE_DIR / 'blog/static',
 )
 
 # Default primary key field type

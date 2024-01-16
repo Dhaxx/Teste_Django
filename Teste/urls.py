@@ -25,6 +25,7 @@ urlpatterns = [
     path('sobre/', include('sobre.urls')),
     path('servicos/', include('servicos.urls')),
     path('projetos/', include('projetos.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 # Adicione esta linha para servir arquivos de mídia durante o desenvolvimento
