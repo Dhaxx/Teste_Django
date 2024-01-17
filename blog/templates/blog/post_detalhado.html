@@ -1,0 +1,20 @@
+{% extends "global/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'servicos/css/servicos.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/post_detalhado.css' %}">
+<div class="img-container">
+    <img src="{{ post.imagem.url }}" alt="">
+    <div class="sobre-container">
+        <div class="sobre-title">
+            <h1>{{ post.titulo }}</h1>
+            <!-- <h4>{{ post.categoria }}</h4> -->
+        </div>
+    </div>
+</div>
+<div class="session-container-white">
+    <span>
+        {{ post.sobre|linebreaksbr|safe }}
+    </span>
+</div>
+{% endblock %}

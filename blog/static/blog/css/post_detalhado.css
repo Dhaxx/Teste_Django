@@ -1,0 +1,13 @@
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1d24376b;
+}
+
+.sobre-title h1 h4 {
+    line-height: 1.0 !important;
+}
