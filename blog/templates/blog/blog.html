@@ -24,5 +24,32 @@
         {% endfor %}
     </div>
 </div>
+<div class="session-container-white" id="posts">
+    {% for postagem in page.object_list %}
+    <div class="post">
+        <img src="{{ postagem.imagem.url }}" alt="">
+        <div class="complemento">
+            <h4>{{ postagem.categoria }}</h4>
+            <h2>{{ postagem.titulo }}</h2>
+            <p>{{ postagem.sobre|slice:":100" }}...</p>
+            <a href="{% url 'post_detalhado' titulo=postagem.titulo %}">Ler mais</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="paginacao">
+    {% if page.has_previous %}
+        <a id='back' href="{% url 'projetos' %}?page={{ page.previous_page_number }}">
+            <img src="{% static 'global/icons/next.svg' %}" alt="">
+            Anterior
+        </a>
+    {% endif %}
+    {% if page.has_next %}
+        <a id='next' href="{% url 'projetos' %}?page={{ page.next_page_number }}">
+            Proximo
+            <img src="{% static 'global/icons/next.svg' %}" alt="">
+        </a>
+    {% endif %}
+</div>
 {% endblock %}
 {% load static %}

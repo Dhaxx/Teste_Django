@@ -15,3 +15,8 @@ def blog(request, categoria=None):
     categorias = Categoria.objects.all()
 
     return render(request, 'blog/blog.html', {'page': page, 'categorias': categorias})
+
+def post_detalhado(request, titulo):
+    post = Postagem.objects.get(titulo=titulo)
+    
+    return render(request, 'blog/post_detalhado.html', {'post': post})
