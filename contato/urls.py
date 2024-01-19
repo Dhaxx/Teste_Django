@@ -1,8 +1,8 @@
 # contato/urls.py
 
 from django.urls import path
-from .views import MinhaViewDoFormulario
+from .views import contato_form
 
 urlpatterns = [
-    path('contato/', MinhaViewDoFormulario.as_view(), name='contato'),
+    path('', contato_form, name='contato_form'),
 ]

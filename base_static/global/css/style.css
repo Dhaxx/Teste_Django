@@ -181,21 +181,23 @@
 }
 
 .contact-info {
-    padding-right: 80px;
+    display: flex;
     height: 100%;
 }
 
 .info-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center!important;
 }
 
 .info-group img {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
 }
 
 .info-group a {
@@ -207,7 +209,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.info h3, span {
+    line-height: 1.0;
 }
 
 .contact-form {
