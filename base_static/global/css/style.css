@@ -216,55 +216,6 @@
     line-height: 1.0;
 }
 
-.contact-form {
-    display: flex;
-    padding-left: 80px;
-    border-left: #DAA520 2px solid;
-    height: 100%;
-    z-index: 30;
-}
-
-.contact-form p {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    font-size: small;
-}
-
-.contact-form input {
-    border-radius: 5px;
-    border: 1.5px solid #DAA520;
-    margin-bottom: 8px;
-}
-
-.contact-form textarea {
-    width: 300px;
-    height: 40px;
-    resize: none;
-    border: 1.5px solid #DAA520;
-    border-radius: 5px;
-    padding: 2px;
-}
-
-.submit-container {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.botao {
-    background-color: #DAA520;
-    border: none;
-    color: aliceblue;
-    width: 160px;
-    height: 40px;
-    cursor: pointer;
-}
-
 .gray {
     background-color: #626161;
 }

@@ -1,5 +1,17 @@
 {% extends "global/base.html" %}
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'servicos/css/servicos.css' %}">
+<link rel="stylesheet" href="{% static 'contato/css/contato.css' %}">
+<div class="img-container">
+    <img src="{% static 'global/images/projetos.png' %}" alt="">
+    <div class="sobre-container">
+        <div class="sobre-title">
+            <h1>Contate-nos</h1>
+            <h4>Para um atendimento mais personalizado!</h4>
+        </div>
+    </div>
+</div>
 <div class="contact-form">
     <form action="." method="post">
         {% csrf_token %}

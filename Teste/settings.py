@@ -133,6 +133,7 @@ STATICFILES_DIRS = (
     BASE_DIR / 'servicos/static',
     BASE_DIR / 'projetos/static',
     BASE_DIR / 'blog/static',
+    BASE_DIR / 'contato/static',
 )
 
 # Default primary key field type
