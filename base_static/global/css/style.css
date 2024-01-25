@@ -24,43 +24,72 @@
 }
 
 .header-container {
+    display: inline-flex;
     width: 100%;
+    padding: 25px 80px;
+    background-color: #1D2437;
+    position: relative;
+    justify-content: space-between;
+    /* width: 100%;
     background-color: #1D2437;
     color: aliceblue;
     height: 5.5vw;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #1D2437;
+    border-bottom: 2px solid #1D2437; */
+}
+
+.toogle-btn {
+    width: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+.toogle-btn span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: goldenrod;
+    float: left;
+    margin-bottom: 8px;
 }
 
 .header-container .titulo {
-    height: 100%;
+    float: left;
+    display: inline-flex;
+    align-items: center;
+    /* height: 100%;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    padding-left: 2.60vw;
+    padding-left: 2.60vw; */
 }
 
 .titulo .logo {
     padding-right: 5px;
-    height: 4vh;
+    height: 2vw
 }
 
 .titulo h1 {
     font-size: 2vw;
     white-space: nowrap;
+    color: #ffffff;
+    margin-bottom: 0;
 }
 
 .header-nav {
-    width: 40%;
+    float: right;
+    /* width: 40%;
     height: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: flex-end; */
 }
 
 .nav-options {
@@ -75,15 +104,16 @@
 }
 
 .nav-options li {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    cursor: pointer;
-    padding: 0 15px; /* Adicione um preenchimento aqui */
+    display: inline-block;
+    padding: 15px 25px;
 }
 
 .nav-options li a {
-    display: block; /* Faz o link ocupar toda a largura do pai */
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+    font-weight: 600;
+    /* display: block;
     height: 100%;
     color: aliceblue;
     text-decoration: none;
@@ -91,7 +121,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.10vw;
+    font-size: 1.10vw; */
 }
 
 .nav-options li a.active {
@@ -100,6 +130,48 @@
 
 .nav-options li a:hover {
     border-bottom: 5px solid goldenrod; /* Efeito de hover */
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 5vw;
+    }
+
+    .titulo .logo {
+        height: 5vw
+    }
+
+    .toogle-btn {
+        display: block;
+    }
+
+    .header-nav {
+        display: none;
+        width: 100%;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        margin-top: 30px;
+
+    }
+
+    .nav-options {
+        flex-direction: column;
+    }
+
+    .nav-options li {
+        padding: 15px 0px;
+        width: 100%;
+    }
+
+    .header-nav.show{
+        display: block;
+
+    }
 }
 
 /* Estilização das Sessões */
@@ -230,3 +302,4 @@
 .gray {
     background-color: #626161;
 }
+
