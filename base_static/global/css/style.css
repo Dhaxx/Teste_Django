@@ -172,6 +172,14 @@
         display: block;
 
     }
+
+    .contact-info {
+        flex-direction: column-reverse;
+    }
+
+    .info-group {
+        margin-bottom: 30px;
+    }
 }
 
 /* Estilização das Sessões */

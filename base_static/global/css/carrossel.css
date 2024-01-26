@@ -29,7 +29,7 @@
 }
 
 .carousel-inner {
-    max-height: 80vh;
+    height: 80vh;
 }
 
 .carousel-item img {
@@ -50,4 +50,15 @@
 
 .carousel-indicators .active {
     background-color: goldenrod;
+}
+
+@media (max-width: 991px) {
+    .carousel-item img {
+        max-height: 80vh;
+        width: auto!important;
+        object-fit: fill;
+    }
+    .carousel-inner {
+        height: 80vh;
+    }
 }
