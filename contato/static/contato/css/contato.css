@@ -29,6 +29,12 @@ form {
     margin-bottom: 20px;
     height: 30px;
     padding-left: 5px;
+    width: -webkit-fill-available;
+}
+
+.contact-form div {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form textarea {
