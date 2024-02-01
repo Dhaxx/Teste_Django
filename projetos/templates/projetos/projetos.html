@@ -28,7 +28,7 @@
         <img src="{{ projeto.miniatura.url }}" alt="">
         <div class="identificador-projeto">
             <h3>{{ projeto.titulo }}</h3>
-            <p>{{ projeto.cidade }}</p>
+            {% if projeto.cidade %}<p>{{ projeto.cidade }}</p>{% endif %}
             <div class="ver-mais">
                 <a href="{% url 'detalhes_projeto' titulo=projeto.titulo %}">Ver Sobre</a>
             </div>

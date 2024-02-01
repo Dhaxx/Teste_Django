@@ -50,6 +50,10 @@
     justify-content: flex-start;
 }
 
+.servico-item:hover {
+    transform: scale(1.1);
+}
+
 .servico-item img {
     height: 100%;
     width: -webkit-fill-available;
