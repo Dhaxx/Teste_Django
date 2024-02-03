@@ -35,7 +35,7 @@
         </div>
         <div class="session-container-blue">
             <div class='lista-servicos'>
-                {% for servico in home_servicos %}
+                {% for servico in home_servicos|slice:":4" %}
                     {% if servico.visivel %}
                         {% if servico.imagem %}
                         <div class="servico-item">
