@@ -33,9 +33,11 @@
 }
 
 .carousel-item img {
-    max-height: 80vh;
+    height: 80vh;
     width: auto;
-    margin: auto;
+    margin: 0;
+    position: relative;
+    top: -2px
 }
 
 .carousel-caption {
@@ -57,6 +59,7 @@
         height: 80vh;
         width: 100%!important;
         object-fit: fill;
+        top: -1px
     }
     .carousel-inner {
         height: 80vh;

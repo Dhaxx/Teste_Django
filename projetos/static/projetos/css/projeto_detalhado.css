@@ -50,7 +50,10 @@
 }
 
 .text {
-    height: auto!important;    
+    height: auto!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    margin-bottom: 0!important;    
 }
 
 .text p {
@@ -59,6 +62,7 @@
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 0.24px;
+    margin-bottom: 0;
 }
 
 .session-container-white {

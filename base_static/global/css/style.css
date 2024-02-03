@@ -149,7 +149,7 @@
 .session-container-white {
     display: flex;
     flex-direction: column;
-    padding: 4.60vw 2.60vw 2.60vw 2.60vw;
+    padding: 2.60vw 2.60vw 2.60vw 2.60vw;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -177,7 +177,7 @@
 .session-title-container {
     width: 100%;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .session-title {
@@ -186,6 +186,7 @@
     padding-left: 1vw;
     border-left: 5px solid goldenrod;
     font-weight: 500;
+    margin-bottom: 40px;
 }
 
 /* Contato */
