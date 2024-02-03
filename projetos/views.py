@@ -12,7 +12,7 @@ def projetos(request, tipo_projeto=None):
     else:
         projetos = Projetos.objects.filter(visivel=True)
 
-    paginacao = Paginator(projetos, 6)
+    paginacao = Paginator(projetos, 3)
     page_num = request.GET.get('page')
     page = paginacao.get_page(page_num)
         
@@ -20,7 +20,7 @@ def projetos(request, tipo_projeto=None):
 
 def projeto_detalhado(request, titulo):
     projeto = Projetos.objects.get(titulo=titulo)
-    projetos = Projetos.objects.all()
+    projetos = Projetos.objects.filter(visivel=True).exclude(titulo=titulo)
     carrosseis_do_projeto = projeto.carrossel_set.all()
 
     imagens_do_projeto = []

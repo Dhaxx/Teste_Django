@@ -230,3 +230,19 @@ a {
     margin-right: 0;
     margin-left: 10px;
 }
+
+@media (max-width: 991px) {
+    .filter-options a {
+        margin-right: 10px;
+    }
+
+    .projetos {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .projeto {
+        margin-right: 0;
+    }
+}

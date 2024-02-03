@@ -7,8 +7,8 @@
     <img src="{% static 'global/images/projetos.png' %}" alt="">
     <div class="sobre-container">
         <div class="sobre-title">
-            <h1>Nossos Serviços</h1>
-            <h4>Transformando Ideias em Realidade!</h4>
+            <h1>Nossos Projetos</h1>
+            <h4>Explore nossos projetos e deixe-se inspirar!</h4>
         </div>
     </div>
 </div>
@@ -28,7 +28,7 @@
         <img src="{{ projeto.miniatura.url }}" alt="">
         <div class="identificador-projeto">
             <h3>{{ projeto.titulo }}</h3>
-            <p>{{ projeto.cidade }}</p>
+            {% if projeto.cidade %}<p>{{ projeto.cidade }}</p>{% endif %}
             <div class="ver-mais">
                 <a href="{% url 'detalhes_projeto' titulo=projeto.titulo %}">Ver Sobre</a>
             </div>

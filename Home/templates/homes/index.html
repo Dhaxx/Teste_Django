@@ -28,13 +28,14 @@
             </div>
         </div>
     </div>
+    {% if home_servicos %}
     <div class="session-container-blue inline">
         <div class="session-title-container">
             <h2 class="session-title">Serviços</h2>
         </div>
         <div class="session-container-blue">
             <div class='lista-servicos'>
-                {% for servico in home_servicos %}
+                {% for servico in home_servicos|slice:":4" %}
                     {% if servico.visivel %}
                         {% if servico.imagem %}
                         <div class="servico-item">
@@ -52,5 +53,6 @@
             </div>
         </div>
     </div>
+    {% endif %}
     {% include 'projetos/expositor_projetos.html' with projetos_realizados=projetos %}
 {% endblock content %}

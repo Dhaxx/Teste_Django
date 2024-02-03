@@ -8,11 +8,6 @@
 
 {% if imagens_do_projeto %}
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <!-- <ol class="carousel-indicators">
-            {% for slide in imagens_do_projeto %}
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
-            {% endfor %}
-        </ol> -->
         <div class="carousel-inner">
             {% for slide in imagens_do_projeto %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -21,7 +16,7 @@
                 <div class="sobre-container">
                     <div class="sobre-title">
                         <h1>{{ projeto.titulo }}</h1>
-                        <h4>{{ projeto.cidade }}</h4>
+                        {% if projeto.cidade %}<h4>{{ projeto.cidade }}</h4>{% endif %}
                     </div>
                 </div>
             {% endfor %}
@@ -52,7 +47,7 @@
             <h2 class="session-title">Feedback</h2>
         </div>
         <div class="session-container-white text feedback-session">
-            <img id="imagem-cliente" src="{{ projeto.imagem_cliente.url }}" alt="Imagem Cliente {{ projeto.nome_cliente}}">
+            {% if projeto.imagem_cliente %}<img id="imagem-cliente" src="{{ projeto.imagem_cliente.url }}" alt="Imagem Cliente {{ projeto.nome_cliente}}">{% endif %}
             <div class="session-container-white text">
                 <p id="feedback">"{{ projeto.feedback }}"</p>
                 <h6>- {{ projeto.nome_cliente }}</h6>

@@ -51,6 +51,8 @@
 
 .text {
     height: auto!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
     padding-top: 0!important;
     padding-bottom: 0!important;
     margin-bottom: 0!important;    
@@ -92,4 +94,18 @@
     box-shadow: -15px 20px 0px 0px #daa520;
     height: 35vh;
     object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .feedback-session {
+        flex-direction: column!important;
+    }
+
+    #imagem-cliente {
+        box-shadow: none;
+        height: 30vh;
+        width: 30vh;
+        border-radius: 100%;
+        margin-bottom: 30px;
+    }
 }
